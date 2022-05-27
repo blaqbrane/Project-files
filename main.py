@@ -1,27 +1,25 @@
-# Read text from a file, and count the occurence of words in that text
-# Example:
-# count_words("The cake is done. It is a big cake!") 
-# --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1
-def read_file_content(filename):
-    #[assignment] Add your code here 
-    with open("story.txt", "r") as f:
-        data = f.read()
-        print(data)
-        return(data)
+class Student:
+    # [assignment] Skeleton class. Add your code here
+    def __init__(self, name, age, tracks, score):
+        self.name = name
+        self.age = age
+        self.tracks = tracks
+        self.score = score
+        #pass
 
-read_file_content(filename="story.txt")
-    
-def count_words():
-    text = read_file_content("story.txt")
-    # [assignment] Add your code here
-    words = text.split()
-    count = dict()
 
-    for word in words:
-        if word in count:
-            count[word] += 1
-        else:
-            count[word] = 1
-    return count
-fn = count_words()
-print(fn)
+Bob = Student(name=input("Enter your name"), age=input("Enter age"), tracks=input("Enter track"), score=41.50)
+print("Student details:")
+print("His name is ", Bob.name)
+print("age:", Bob.age)
+print("track:", Bob.tracks )
+print("score:", Bob.score)
+
+# Expected methods
+#Bob.change_name("Peter")
+#Bob.change_age(34)
+#Bob.add_track("UI/UX")
+#Bob.get_score()
+def get_score(self):
+    print("Bob score is", self.score)
+    return self.score
